@@ -8,15 +8,31 @@ export default function Home() {
         <title>Ryan Anderson's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <header>
+        <div className={styles.header}>
+          <ul>
+            <li>
+              <a>Work</a>
+              <a>About</a>
+              <a>Contact</a>
+              <a>
+                <button>Resume</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <section>
+          <div className={styles.container}>
+            <h2>Hi, I'm Ryan &#128075; </h2>
+            <h1 className={styles.title}>I'm a Front End Developer</h1>
+            <p className={styles.description}>
+              I focus on clean, scalable web experiences for ethically conscious
+              companies.
+            </p>
+          </div>
+        </section>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -62,7 +78,6 @@ export default function Home() {
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -95,6 +110,17 @@ export default function Home() {
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
+        button {
+          font-weight: 700;
+          text-transform: uppercase;
+
+          background-color: #ffffff;
+          padding: 0.75rem 1rem;
+          border-radius: 0.25rem;
+          border: solid 0.125rem #121212;
+          box-shadow: 0.25rem 0.25rem #121212;
+          cursor: pointer;
+        }
       `}</style>
 
       <style jsx global>{`
@@ -105,6 +131,7 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+          border: #000 4px solid;
         }
         * {
           box-sizing: border-box;
