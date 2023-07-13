@@ -3,15 +3,22 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Ryan Anderson's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <header>
         <div className={styles.header}>
           <ul>
             <li>
+              <a>[logo]</a>
               <a>Work</a>
               <a>About</a>
               <a>Contact</a>
@@ -34,35 +41,43 @@ export default function Home() {
           </div>
         </section>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <section
+          className={`${styles.border} ${styles.checker_background} ${styles.container}`}
+        >
+          <h2>Past Work</h2>
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h3>Documentation </h3>
+              <p>Find in-depth information about Next.js features and API.</p>
+            </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <div className={`${styles.card} ${styles.box_shadow}`}>
+              <div className={styles.card_title}>
+                <h3>Learn </h3>
+              </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+              <p>Learn about Next.js in an interactive course with quizzes!</p>
+            </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            <a
+              href="https://github.com/vercel/next.js/tree/master/examples"
+              className={styles.card}
+            >
+              <h3>Examples </h3>
+              <p>Discover and deploy boilerplate example Next.js projects.</p>
+            </a>
+
+            <a
+              href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              className={styles.card}
+            >
+              <h3>Deploy </h3>
+              <p>
+                Instantly deploy your Next.js site to a public URL with Vercel.
+              </p>
+            </a>
+          </div>
+        </section>
       </main>
 
       <footer>
@@ -77,13 +92,13 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        main {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+        // main {
+        //   flex: 1;
+        //   display: flex;
+        //   flex-direction: column;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
         footer {
           width: 100%;
           height: 100px;
@@ -111,7 +126,6 @@ export default function Home() {
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
         button {
-          font-weight: 700;
           text-transform: uppercase;
 
           background-color: #ffffff;
@@ -121,6 +135,10 @@ export default function Home() {
           box-shadow: 0.25rem 0.25rem #121212;
           cursor: pointer;
         }
+
+        section {
+          min-width: 100%;
+        }
       `}</style>
 
       <style jsx global>{`
@@ -128,9 +146,9 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: PT Mono, -apple-system, BlinkMacSystemFont, Segoe UI,
+            Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+            Helvetica Neue, sans-serif;
           border: #000 4px solid;
         }
         * {
